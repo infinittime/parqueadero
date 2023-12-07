@@ -1,0 +1,46 @@
+/* Estilos para la ventana de registro de nuevo vehículo */
+
+.registro-vehiculo {
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    margin: 50px auto;
+    border-radius: 8px;
+}
+
+.registro-vehiculo h2 {
+    text-align: center;
+    color: #333;
+}
+
+.registro-vehiculo label {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+}
+
+.registro-vehiculo select,
+.registro-vehiculo input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.registro-vehiculo button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.registro-vehiculo button:hover {
+    background-color: #45a049;
+}

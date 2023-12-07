@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vehiculos.css">
+    <link rel="stylesheet" href="registro_nuevo_vehiculo.css">
+    <title>Barra de Navegación</title>
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <a href="#" class="active">vehiculos</a>
+        <a href="#">reporte</a>
+        <a href="#">estadisticas</a>
+        <a href="#">tipos</a>
+        <a href="#">tarifas</a>
+        <a href="#">ajustes</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <button class="button" onclick="IngresarNuevo()">ingresar Nuevo</button>
+    <div class="registro-vehiculo" id="registro-vehiculo" style="display: none;">
+        <h2>Registro de Nuevo Vehículo</h2>
+        <label for="tipoVehiculo">Tipo de Vehículo:</label>
+        <select id="tipoVehiculo">
+            <!-- Opciones de la lista desplegable -->
+            <option value="moto">moto</option>
+            <select id="listaOrigen">
+                
+            </select>
+        </select>
+
+        <label for="placa">Placa:</label>
+        <input type="text" id="placa" maxlength="10">
+
+        <label for="descripcion">Descripción del Vehículo (hasta 4 palabras):</label>
+        <input type="text" id="descripcion" maxlength="20">
+
+        <button onclick="guardarRegistro()">Registrar Vehículo</button>
+        <button onclick="cancelarRegistro()">Cancelar Registro</button>
+    </div>
+
+    <div class="contenedor">
+
+        <div class="filtro-fechas">
+            <label for="fechaInicio">Fecha Inicio:</label>
+            <input type="date" id="fechaInicio">
+
+            <label for="fechaFin">Fecha Fin:</label>
+            <input type="date" id="fechaFin">
+
+            <button onclick="aplicarFiltros()">Aplicar Filtros</button>
+        </div>
+        <h2>Lista de Vehículos</h2>
+        <div id="lista-vehiculos">
+            <!-- La lista se llenará dinámicamente con JavaScript -->
+        </div>
+    </div>
+
+    <script src="vehiculos.js"></script>
+</body>
+</html>
